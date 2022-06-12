@@ -49,3 +49,8 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publishdir: ./dist
+
+      - name: push to actions-gh-pages
+        run: |
+          git branch
+          git subtree push --prefix dist origin gh-pages
