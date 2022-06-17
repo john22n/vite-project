@@ -1,8 +1,9 @@
 name: Deploy
 
-on: [push]
-permissions:
-  contents: write
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
@@ -43,12 +44,8 @@ jobs:
           name: production-files
           path: ./dist
 
-      - name: config git
-        run:
-          git config --global --add safe.directory "$GITHUB_WORKSPACE"
-      
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          branch: gh-pages
-          folder: dist
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publishdir: ./dist
