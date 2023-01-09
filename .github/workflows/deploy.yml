@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+strategy:
+  matrix:
+    node-version: [12.x, 16.x]
+
 jobs:
   build:
     name: Build
