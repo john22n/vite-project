@@ -1,5 +1,8 @@
 name: Deploy
 
+runs:
+  using: 'node16'
+
 on:
   push:
     branches:
@@ -13,6 +16,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
+        with:
+          node-version: 16
 
       - name: Setup Node
         uses: actions/setup-node@v1
