@@ -13,7 +13,14 @@
         "test": "vitest --config ./vitest.config.ts"
     },
     "dependencies": {
+        "@emotion/react": "^11.10.5",
+        "@emotion/styled": "^11.10.5",
+        "@fontsource/roboto": "^4.5.8",
+        "@mui/icons-material": "^5.11.0",
+        "@mui/material": "^5.11.4",
+        "@mui/x-date-pickers": "^5.0.13",
         "D": "^1.0.0",
+        "dayjs": "^1.11.7",
         "eslint-config-airbnb-typescript": "^17.0.0",
         "react": "^18.0.0",
         "react-dom": "^18.0.0"
